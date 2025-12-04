@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập Tin học – Giao diện đẹp</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #34495e;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border-left: 5px solid #3498db;
+      padding-left: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .code-box {
+      background: #f7f9fc;
+      padding: 15px;
+      border-left: 5px solid #2e86de;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
+      font-size: 14px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Bài tập Tin học</h1>
+
+    <h2>VẬN DỤNG – VD1</h2>
+    <p><b>Yêu cầu:</b> Tạo một trang web chứa biểu mẫu đăng ký thành viên gồm: Họ tên, Email, Ngày sinh, Loại hình thành viên và nút Đăng ký.</p>
+
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Biểu mẫu đăng ký thành viên&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Đăng ký thành viên&lt;/h2&gt;
+
+&lt;form action="/submit_registration" method="post"&gt;
+  Họ và tên:&lt;br&gt;
+  &lt;input type="text" name="fullname" required&gt;&lt;br&gt;&lt;br&gt;
+
+  Email:&lt;br&gt;
+  &lt;input type="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+  Ngày sinh:&lt;br&gt;
+  &lt;input type="date" name="birthdate" required&gt;&lt;br&gt;&lt;br&gt;
+
+  Loại hình thành viên:&lt;br&gt;
+  &lt;select name="membership"&gt;
+    &lt;option value="basic"&gt;Thành viên cơ bản&lt;/option&gt;
+    &lt;option value="premium"&gt;Thành viên cao cấp&lt;/option&gt;
+  &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Đăng ký"&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </div>
+
+    <h2>VẬN DỤNG – VD2</h2>
+    <p><b>Yêu cầu:</b> Tạo trang web nghệ thuật gồm: hình minh họa, nhạc Quốc ca, liên kết mở trang đăng ký (VD1) trong iframe.</p>
+
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Trang web nghệ thuật&lt;/title&gt;
+&lt;style&gt;
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;Nghệ thuật&lt;/h1&gt;
+
+&lt;img src="link_den_anh_minh_hoa.jpg" width="500" height="300"&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="link_den_bai_hat_quoc_ca.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;p&gt;&lt;a href="registration.html" target="iframe_content"&gt;Đăng ký&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe name="iframe_content"&gt;&lt;/iframe&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </div>
+
+    <div class="footer">
+      © 2025 – Trang web bài tập thiết kế bởi bạn
+    </div>
+  </div>
+
+</body>
+</html>
